@@ -1,0 +1,746 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4f7ef;
+    color: #263b2b;
+}
+
+header {
+    background-color: #183d2b;
+    color: white;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header h2 {
+    font-size: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #b8e986;
+}
+
+.hero {
+    min-height: 500px;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.45),
+        rgba(0, 0, 0, 0.45)
+    ), url("https://images.unsplash.com/photo-1448375240586-882707db888b")
+    center/cover no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: #78a942;
+    color: white;
+    padding: 13px 28px;
+    text-decoration: none;
+    border-radius: 25px;
+}
+
+.btn:hover {
+    background-color: #527d2b;
+}
+
+section:not(.hero) {
+    padding: 65px 10%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 30px;
+    color: #245536;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 850px;
+    margin: auto;
+}
+
+footer {
+    background-color: #183d2b;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+}
+
+/* CAMPING GEAR PAGE */
+
+.gear-hero {
+    background: linear-gradient(rgba(14, 35, 20, 0.55),
+    rgba(14, 35, 20, 0.55)),
+    url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e")
+    center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.gear-hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.gear-hero p {
+    font-size: 18px;
+}
+
+.gear-section {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.gear-intro {
+    max-width: 750px;
+    margin: 0 auto 35px;
+    line-height: 1.8;
+}
+
+.gear-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.gear-card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.gear-card:hover {
+    transform: translateY(-8px);
+}
+
+.gear-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.gear-card h3 {
+    color: #245536;
+    margin: 20px 10px 10px;
+}
+
+.gear-card p {
+    font-size: 14px;
+    padding: 0 18px 22px;
+    line-height: 1.7;
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+    .gear-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .gear-container {
+        grid-template-columns: 1fr;
+    }
+
+    .gear-hero h1 {
+        font-size: 30px;
+    }
+}
+
+/* ABOUT PAGE */
+
+.about-hero {
+    min-height: 350px;
+    background: linear-gradient(rgba(0, 0, 0, 0.45),
+                rgba(0, 0, 0, 0.55)),
+                url("images/lamp.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+}
+
+.about-hero-content {
+    max-width: 750px;
+}
+
+.about-hero h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.about-hero p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.about-intro {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 65px 8%;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.about-tag {
+    color: #52834a;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.about-text h2 {
+    font-size: 30px;
+    color: #285b36;
+    margin: 15px 0;
+}
+
+.about-text p {
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 280px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.about-values {
+    background: #f1f6ed;
+    padding: 60px 8%;
+    text-align: middle;
+}
+
+.about-values h2 {
+    color: #285b36;
+    font-size: 30px;
+}
+
+.section-description {
+    color: #666;
+    margin: 12px 0 35px;
+}
+
+.value-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.value-card {
+    background: white;
+    padding: 30px 22px;
+    border-radius: 14px;
+    flex: 1;
+    min-width: 220px;
+    max-width: 320px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.value-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.value-card h3 {
+    color: #347344;
+    margin-bottom: 12px;
+}
+
+.value-card p {
+    color: #666;
+    line-height: 1.7;
+}
+
+.about-message {
+    background: #285b36;
+    color: white;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.about-message h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.about-message p {
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.about-button {
+    display: inline-block;
+    background: #e6f0df;
+    color: #285b36;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.about-button:hover {
+    background: white;
+}
+
+@media (max-width: 700px) {
+    .about-hero h2 {
+        font-size: 29px;
+    }
+
+    .about-intro {
+        padding: 40px 6%;
+    }
+
+    .about-values {
+        padding: 40px 6%;
+    }
+}
+
+/* WILDLIFE PAGE */
+
+.wildlife-hero {
+    min-height: 350px;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.55)),
+                url("images/deer.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+}
+
+.wildlife-hero h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.wildlife-hero p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.wildlife-intro {
+    text-align: center;
+    padding: 55px 10%;
+}
+
+.wildlife-intro h2,
+.animal-section h2 {
+    color: #285b36;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.wildlife-intro p {
+    color: #555;
+    line-height: 1.8;
+    max-width: 850px;
+    margin: auto;
+}
+
+.animal-section {
+    background: #f1f6ed;
+    padding: 55px 8%;
+    text-align: center;
+}
+
+.animal-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.animal-card {
+    background: white;
+    flex: 1;
+    min-width: 220px;
+    max-width: 320px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.animal-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.animal-card h3 {
+    color: #347344;
+    margin: 18px 0 10px;
+}
+
+.animal-card p {
+    color: #666;
+    line-height: 1.7;
+    padding: 0 18px 22px;
+}
+
+.wildlife-message {
+    background: #285b36;
+    color: white;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.wildlife-message h2 {
+    margin-bottom: 15px;
+}
+
+.wildlife-message p {
+    line-height: 1.7;
+}
+
+@media (max-width: 700px) {
+    .wildlife-hero h2 {
+        font-size: 28px;
+    }
+
+    .animal-section {
+        padding: 40px 6%;
+    }
+}
+
+/* DESTINATIONS PAGE */
+
+.places-hero {
+    min-height: 350px;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.55)),
+                url("images/mountains.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+}
+
+.places-hero h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.places-hero p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.places-intro {
+    text-align: center;
+    padding: 55px 10%;
+}
+
+.places-intro h2,
+.destination-section h2 {
+    color: #285b36;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.places-intro p {
+    color: #555;
+    line-height: 1.8;
+    max-width: 850px;
+    margin: auto;
+}
+
+.destination-section {
+    background: #f1f6ed;
+    padding: 55px 8%;
+    text-align: center;
+}
+
+.destination-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.destination-card {
+    background: white;
+    flex: 1;
+    min-width: 250px;
+    max-width: 340px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-7px);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.destination-info {
+    padding: 20px;
+}
+
+.destination-info h3 {
+    color: #347344;
+    margin-bottom: 12px;
+}
+
+.destination-info p {
+    color: #666;
+    line-height: 1.7;
+}
+
+.travel-tips {
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.travel-tips h2 {
+    color: #285b36;
+    margin-bottom: 20px;
+}
+
+.travel-tips ul {
+    display: inline-block;
+    text-align: left;
+    line-height: 2;
+    color: #555;
+}
+
+@media (max-width: 700px) {
+    .places-hero h2 {
+        font-size: 28px;
+    }
+
+    .destination-section {
+        padding: 40px 6%;
+    }
+}
+
+/* LOGIN PAGE */
+
+.login-page {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)),
+        url("images/tent.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 15px;
+}
+
+
+    
+.login-container {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    padding: 40px 35px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+
+.login-container h1 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.login-container h2 {
+    color: white;
+    margin-bottom: 12px;
+}
+
+.login-container p {
+    color: white;
+    line-height: 1.6;
+}
+
+.login-container form {
+    text-align: left;
+    margin-top: 25px;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 8px;
+    color: white;
+    font-weight: bold;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 14px;
+    background: #347344;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background: #285b36;
+}
+
+.login-links {
+    margin-top: 22px;
+    font-size: 14px;
+}
+
+.login-links a,
+.back-home {
+    color: #347344;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.back-home {
+    display: inline-block;
+    margin-top: 15px;
+}
+
+/* SHOW PASSWORD CHECKBOX */
+
+.login-container .show-password {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-size: 14px;
+    font-weight: normal;
+    cursor: pointer;
+    margin-top: -10px;
+    margin-bottom: 18px;
+}
+
+.login-container .show-password input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* REGISTRATION PAGE */
+
+.register-container {
+    max-width: 450px;
+}
+
+.register-container h1 {
+    color: white;
+}
+
+.register-container h2 {
+    color: white;
+}
+
+.register-container p {
+    color: white;
+}
+
+.register-container label {
+    color: white;
+}
+
+.register-container input {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.register-container button {
+    margin-top: 10px;
+}
